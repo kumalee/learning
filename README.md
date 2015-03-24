@@ -3,11 +3,11 @@
 ## 2015年6月，ECMAScript 6预计将发布正式版本。
 
 ## ES6 支持情况表
-![请戳这里](http://kangax.github.io/compat-table/es6/)
+[请戳这里](http://kangax.github.io/compat-table/es6/)
 
 ## ES6 -> ES5 转码工具
-![Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
-![Babel](https://babeljs.io/)
+[Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
+[Babel](https://babeljs.io/)
 
 ## let
 1. 增加了块级作用域, 简单理解就是在一个 {} 范围内
