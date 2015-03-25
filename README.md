@@ -24,13 +24,13 @@ ES5规定，所有全局变量都是全局对象的属性。
 ES6规定，var命令和function命令声明的全局变量，属于全局对象的属性；
 let命令、const命令、class命令声明的全局变量，不属于全局对象的属性。
 
-## 变量解构赋值 Destructuring
+## 变量析构赋值 Destructuring
 var [a, b, c] = [1, 2, 3];
 a // 1
 b // 2
 c // 3
 
-对象解构必须变量名和属性名一样
+对象析构必须变量名和属性名一样
 var { bar, foo } = { foo: "aaa", bar: "bbb" };
 foo // "aaa"
 bar // "bbb"
@@ -53,7 +53,7 @@ x // 3
 var {x, y = 5} = {x: 1};
 console.log(x, y) // 1, 5
 
-对象解构可以与函数参数的默认值一起使用。
+对象析构可以与函数参数的默认值一起使用。
 function move({x=0, y=0} = {}) {
   return [x, y];
 }
