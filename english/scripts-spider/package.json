@@ -1,0 +1,14 @@
+{
+  "name": "scripts-spider",
+  "version": "1.0.0",
+  "description": "spider to get tv show scripts from https://www.springfieldspringfield.co.uk",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Kuma Li",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.14.0"
+  }
+}
