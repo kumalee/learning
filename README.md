@@ -1,107 +1,125 @@
-# something about es6
+# My Learning Docs and Knowledge Maps
 
-## 2015年6月，ECMAScript 6预计将发布正式版本。
+* [Anatomy](#Anatomy)
+* [Astronomy](#Astronomy)
+* [Cooking](#Cooking)
+* [CSS](#CSS)
+* [Design](#Design)
+* [Docker](#Docker)
+* [English](#English)
+* [Git](#Git)
+* [Go](#Go)
+* [Gym](#Gym)
+* [HTML](#HTML)
+* [Japanese](#Japanese)
+* [Javascript](#Javascript)
+* [Kubernetes](#Kubernetes)
+* [Kbengine](#Kbengine)
+* [Linux](#Linux)
+* [Movie](#Movie)
+* [Network](#Network)
+* [oh-my-zsh](#oh-my-zsh)
+* [Photography](#Photography)
+* [PostgreSQL](#PostgreSQL)
+* [Python](#Python)
+* [Software](#Software)
+* [Swift](#Swift)
+* [Travel](#Travel)
+* [Unity](#Unity)
+* [VSCode](#VSCode)
 
-## ES6 支持情况表
-[请戳这里](http://kangax.github.io/compat-table/es6/)
+## Anatomy
+/əˈnætəmi/ 解剖学
 
-## ES6 -> ES5 转码工具
-[Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)
-[Babel](https://babeljs.io/)
+## Astronomy
+/əˈstrɔnəmɪ/ 天文学
 
-## let
-1. 增加了块级作用域, 简单理解就是在一个 {} 范围内
-2. 不能在同一区块重复声明
-3. 不能在声明前调用（没有自动提升）,如果出现这种情况的错误，叫做 TDZ(temporal dead zone)
+## Cooking
+/'kʊkɪŋ/ 烹饪
 
-## const
-与let的三点一样，但重复声明不会报错，会默默地失败
-const是指向变量的地址，所以如果变量是一个object，可以后来添加修改属性，完全冻结要用
-Object.freeze({})
+## CSS
+Cascading/kæ'skeidiŋ/ Style Sheets 层叠样式表
 
-## 全局变量
-ES5规定，所有全局变量都是全局对象的属性。
-ES6规定，var命令和function命令声明的全局变量，属于全局对象的属性；
-let命令、const命令、class命令声明的全局变量，不属于全局对象的属性。
+## Design
+/diˈzain/ 设计
 
-## 变量析构赋值 Destructuring
-var [a, b, c] = [1, 2, 3];
-a // 1
-b // 2
-c // 3
+## Docker
+/'dɑkɚ/ 容器技术
 
-对象析构必须变量名和属性名一样
-var { bar, foo } = { foo: "aaa", bar: "bbb" };
-foo // "aaa"
-bar // "bbb"
+## English
+/'iŋɡliʃ/ 英语
 
-var { baz } = { foo: "aaa", bar: "bbb" };
-baz // undefined
+## Git
+/ɡɪt/ Git
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-var { foo: baz } = { foo: "aaa", bar: "bbb" };
-baz // "aaa"
+[Docs](https://git-scm.com/docs)
+[Pro Git](https://git-scm.com/book/en/v2)
+[Videos](https://git-scm.com/videos)
+[External Links](https://git-scm.com/doc/ext)
 
-let obj = { first: 'hello', last: 'world' };
-let { first: f, last: l } = obj;
-f // 'hello'
-l // 'world'
+## Go
+/ɡo/ Go 编程语言
 
-可以指定默认值
-var { x = 3 } = {};
-x // 3
+## Gym
+/dʒɪm/ 健身
 
-var {x, y = 5} = {x: 1};
-console.log(x, y) // 1, 5
+## HTML
+/ˌeitʃ ti: em 'el/ abbr. Hypertext/'haɪpɚ'tɛkst/ Markup Language 超文本链接标示语言
 
-对象析构可以与函数参数的默认值一起使用。
-function move({x=0, y=0} = {}) {
-  return [x, y];
-}
+## Japanese
+/ˌdʒæpəˈniz/ 日语
 
-move({x: 3, y: 8}); // [3, 8]
-move({x: 3}); // [3, 0]
-move({}); // [0, 0]
-move(); // [0, 0]
+## Javascript
+/'dʒævə'skript/ Javascript 编程语言
 
-便捷用法
-let { log, sin, cos } = Math;
+## Kubernetes
+/ˈkubəˈnets/ Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications.
 
-交换变量的值
-[x, y] = [y, x];
+The name Kubernetes originates from Greek, meaning helmsman or pilot, and is the root of governor and cybernetic. K8s is an abbreviation derived by replacing the 8 letters “ubernete” with “8”.
 
-函数参数的默认值
-jQuery.ajax = function (url, {
-  async = true,
-  beforeSend = function () {},
-  cache = true,
-  complete = function () {},
-  crossDomain = false,
-  global = true,
-  // ... more config
-}) {
-  // ... do stuff
-};
+[Official Site](https://kubernetes.io)
 
-遍历Map结构
-var map = new Map();
-map.set('first', 'hello');
-map.set('second', 'world');
+## Kbengine
+/kei bi: 'ɛndʒɪn/ A MMOG engine of server. AKA: comblockengine
 
-for (let [key, value] of map) {
-  console.log(key + " is " + value);
-}
-// first is hello
-// second is world
+[Official Site](https://www.comblockengine.com/)
+[Github](https://github.com/kbengine/kbengine)
 
-// 获取键名
-for (let [key] of map) {
-  // ...
-}
+## Linux
+/ˈlɪnəks/ Linux 操作系统
 
-// 获取键值
-for (let [,value] of map) {
-  // ...
-}
+## Movie
+/'muvi/ 电影
 
-输入模块的指定方法
-const { SourceMapConsumer, SourceNode } = require("source-map");
+## Network
+/'nɛtwɝk/ 网络
+
+## oh-my-zsh
+A delightful community-driven (with 1,300+ contributors) framework for managing your zsh configuration. Includes 200+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant, php, python, etc), over 140 themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.
+
+[Official Site](https://ohmyz.sh/)
+
+## Photography
+/fə'tɑɡrəfi/ 摄影
+
+## PostgreSQL
+/'postgresəqo/ PostgreSQL 
+
+## Python
+/ˈpaɪˌθɑn/ Python 编程语言
+
+## Software
+/'sɔftwɛr/ 软件
+
+## Swift
+/swɪft/ Swift 编程语言
+
+## Travel
+/'trævl/ 旅游
+
+## Unity
+/'junəti/ Unity 游戏动画开发平台
+
+## VSCode
+/vskod/ Visual /'vɪʒʊəl/ Studio /'studɪo/ Code /kod/
