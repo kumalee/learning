@@ -36,3 +36,31 @@ Are you hungry? No, I'm not, but I'm thirsty.
 Is your friend English? Yes, he is.
 Are these your keys? Yes, they are.
 That's my seat. No, it isn't.
+
+# I am doing (present continuous)
+She's eating.
+She isn't reading.
+I'm eating.
+It's raining.
+The sun isn't shining.
+They're running.
+The aren't walking.
+I'm working. I'm not watching TV.
+Maria is reading a newspaper.
+She isn't eating. (or She's not eating.)
+The bus is coming.
+We're having dinner.
+You're not listening to me. (or You aren't listening...)
+The children are doing their homework.
+She's wearing a hat.
+They're playing football.
+I'm not watching TV.
+Please be quiet. I'm working. (= I'm working now.)
+Look, there's Sarah. Shes' wearing a brown coat. (= she is wearing it now.)
+The weather is nice. It's not raining.
+Where are the children? They're playing in the park.
+(on the phone) We're having dinner now. Can I call you later?
+You can turn off the television. I'm not watching it.
+
+come -> coming, write -> writing, dance -> dancing, run -> running,
+sit -> sitting, swim -> swimming, lie -> lying
