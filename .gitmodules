@@ -1,0 +1,6 @@
+[submodule "javascript/webpack/dive-into-webpack"]
+	path = javascript/webpack/dive-into-webpack
+	url = https://github.com/gwuhaolin/dive-into-webpack.git
+[submodule "git/git-flight-rules"]
+	path = git/git-flight-rules
+	url = https://github.com/k88hudson/git-flight-rules.git
