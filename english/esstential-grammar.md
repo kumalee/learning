@@ -64,3 +64,28 @@ You can turn off the television. I'm not watching it.
 
 come -> coming, write -> writing, dance -> dancing, run -> running,
 sit -> sitting, swim -> swimming, lie -> lying
+
+# Are you doing? (present continuous questions)
+I am doing/working/going/staying
+he/she/it is doing/working/going/staying
+we/your/they are doing/working/going/staying
+am I doing/working/going/staying?
+is he/she/it doing/working/going/staying?
+are we/you/they doing/working/going/staying?
+What are you doing?
+Are you feeling OK? Yes, I'm fine, thanks.
+Is it raining? Yes, take an umbrella.
+Why are you wearing a coat? It's not cold.
+What's Paul doing? He's studying for his exams.
+What are the children doing? They're watching TV.
+Look, there's Emily! Where's she doing?
+Who are you waiting for? Are you waiting for Sue?
+Where is/are + subject + -ing
+Where is he working today?
+Where is ben working today?
+Where are they going?
+Where are those people going?
+Are you going now? Yes, I am.
+Is Ben working today? Yes, he is.
+Is it raining? No, it isn't.
+Are your friends staying at a hotel? No, they aren't. They're staying with me.
