@@ -23,6 +23,7 @@
 * [Photography](#Photography)
 * [PostgreSQL](#PostgreSQL)
 * [Python](#Python)
+* [SEO](#SEO)
 * [Software](#Software)
 * [Swift](#Swift)
 * [Travel](#Travel)
@@ -112,6 +113,8 @@ A delightful community-driven (with 1,300+ contributors) framework for managing 
 
 ## Python
 /ˈpaɪˌθɑn/ Python 编程语言
+
+## SEO
 
 ## Software
 /'sɔftwɛr/ 软件
