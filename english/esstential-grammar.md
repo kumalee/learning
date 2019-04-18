@@ -1,21 +1,21 @@
-# am/is/are
-* I'm cold. Can you close the window, please?
-* I'm 32 years old. My sister is 29.
-* Steve is ill. He's in bed.
-* My brother is scared of dogs.
-* It's ten o'clock. You're late again.
-* Ann and I are good friends.
-* your keys are on the table.
-* I'm tired, but I'm not hungry.
-* Lisa isn't interested in politics. She's interested in art.
-* James isn't a teacher. He's a student.
-* Those people aren't English. They're Australian.
-* It's sunny today, but it isn't warm.
-* Thank you. That's very kind of you.
-* Look! There's Chris.
-* 'Here's your key.' 'Thank you.'
+# 1. am/is/are
+I'm cold. Can you close the window, please?
+I'm 32 years old. My sister is 29.
+Steve is ill. He's in bed.
+My brother is scared of dogs.
+It's ten o'clock. You're late again.
+Ann and I are good friends.
+your keys are on the table.
+I'm tired, but I'm not hungry.
+Lisa isn't interested in politics. She's interested in art.
+James isn't a teacher. He's a student.
+Those people aren't English. They're Australian.
+It's sunny today, but it isn't warm.
+Thank you. That's very kind of you.
+Look! There's Chris.
+'Here's your key.' 'Thank you.'
 
-# am/is/are (questions)
+# 2. am/is/are (questions)
 Am I late? No, you're on time.
 Is your mother at home? No, she's out.
 Are your parents at home? No, they're out.
@@ -37,7 +37,7 @@ Is your friend English? Yes, he is.
 Are these your keys? Yes, they are.
 That's my seat. No, it isn't.
 
-# I am doing (present continuous)
+# 3. I am doing (present continuous)
 She's eating.
 She isn't reading.
 I'm eating.
@@ -62,10 +62,11 @@ Where are the children? They're playing in the park.
 (on the phone) We're having dinner now. Can I call you later?
 You can turn off the television. I'm not watching it.
 
+## Spelling
 come -> coming, write -> writing, dance -> dancing, run -> running,
 sit -> sitting, swim -> swimming, lie -> lying
 
-# Are you doing? (present continuous questions)
+# 4. Are you doing? (present continuous questions)
 I am doing/working/going/staying
 he/she/it is doing/working/going/staying
 we/your/they are doing/working/going/staying
@@ -89,3 +90,34 @@ Are you going now? Yes, I am.
 Is Ben working today? Yes, he is.
 Is it raining? No, it isn't.
 Are your friends staying at a hotel? No, they aren't. They're staying with me.
+
+# 5. I do/work/like etc. (present simple)
+They have a lot of books.
+They read a lot.
+He's eating an ice cream.
+He likes ice cream.
+I/we/you/they read  like  work  live  watch   do   have
+he/she/it     reads likes works lives watches does has
+I work in a shop. My brother works in a bank.
+Lucy lives in London. Her parents live in Scotland.
+It rains a lot in winter.
+Joe has a shower every day.
+
+## Spelling
+-es after -s / -sh / -ch: pass -> passes,  finish -> finishes,  watch -> watches
+-y -> ies study -> studies,  try -> tries
+do -> does, go -> goes
+
+I like big cities.
+Your English is good. You speak very well.
+Tom works very hard. He starts at 7.30 and finishes at 8 o'clock in the evening.
+The earth goes round the sun.
+We do a lot of different things in our free time.
+It costs a lot of money to build a hospital.
+
+## always/never/usually/sometime + present simple
+Sue always gets to work early.
+I never eat breakfast.
+We often go away at weekends.
+Mark usually plays football on Sundays.
+I sometimes walk to work, but not very often.
