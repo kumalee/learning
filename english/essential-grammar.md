@@ -313,3 +313,54 @@ Sarah speaks Spanish, but she doesn't speak Italian.
 David doesn't do his job very well.
 
 Paula doesn't usually have breakfast.
+
+# 7. Do you ...? (present simple questions)
+do I/we/you/they work/like/do/have?
+
+does he/she/it work/like/do/have?
+
+## word order:
+
+(Where/How often/What/How much + ) do/does + subject + verb +  object
+
+Do you play the guitar?
+
+Do your friends live near here?
+
+Does Chris work on Sundays?
+
+Does it rain a lot here?
+
+Where do your parents live?
+
+How often do you wash your hair?
+
+What does this word mean?
+
+How much does it cost to fly to Rome?
+
+Does Chris always work on Sunday?
+
+What do you usually do at weekends?
+
+What do you do? = What's your job?
+
+What do you do? I work in a bank.
+
+## short answers
+
+Yes, I/we/your/they do.
+
+Yes, he/she/it does.
+
+No, I/we/your/they don't.
+
+No, he/she/it doesn't.
+
+Do you play the guitar? No, I don't.
+Do your parents speak English? Yes, they do.
+Does James work hard? Yes, he does.
+Does your sister live in London? No, she doesn't.
+
+
+
