@@ -674,3 +674,273 @@ Array.prototype.unshift()
   arr.unshift([-7, -6], [-5]); // the new array length is 8
   // arr is [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]
   ```
+
+#### Accessor methods
+These methods do not modify the array and return some representation of the array.
+
+Array.prototype.concat()
+- Returns a new array that is this array joined with other array(s) and/or value(s).
+- Syntax
+  ```js
+  var new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+  ```
+- Examples
+  ```js
+  const letters = ['a', 'b', 'c'];
+  const numbers = [1, 2, 3];
+
+  letters.concat(numbers);
+  // result in ['a', 'b', 'c', 1, 2, 3]
+
+  const num1 = [1, 2, 3];
+  const num2 = [4, 5, 6];
+  const num3 = [7, 8, 9];
+
+  const numbers = num1.concat(num2, num3);
+
+  console.log(numbers); 
+  // results in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+  const letters = ['a', 'b', 'c'];
+
+  const alphaNumeric = letters.concat(1, [2, 3]);
+
+  console.log(alphaNumeric); 
+  // results in ['a', 'b', 'c', 1, 2, 3]
+
+
+
+  const num1 = [[1]];
+  const num2 = [2, [3]];
+
+  const numbers = num1.concat(num2);
+
+  console.log(numbers);
+  // results in [[1], 2, [3]]
+
+  // modify the first element of num1
+  num1[0].push(4);
+
+  console.log(numbers);
+  // results in [[1, 4], 2, [3]]
+  ```
+
+Array.prototype.includes()
+- Determines whether an array contains a certain element, returning true or false as appropriate.
+- Syntax
+  ```js
+  arr.includes(valueToFind[, fromIndex])
+  ```
+- Examples
+  ```js
+  [1, 2, 3].includes(2);     // true
+  [1, 2, 3].includes(4);     // false
+  [1, 2, 3].includes(3, 3);  // false
+  [1, 2, 3].includes(3, -1); // true
+  [1, 2, NaN].includes(NaN); // true
+
+  var arr = ['a', 'b', 'c'];
+
+  arr.includes('c', 3);   // false
+  arr.includes('c', 100); // false
+
+
+  // array length is 3
+  // fromIndex is -100
+  // computed index is 3 + (-100) = -97
+
+  var arr = ['a', 'b', 'c'];
+
+  arr.includes('a', -100); // true
+  arr.includes('b', -100); // true
+  arr.includes('c', -100); // true
+  arr.includes('a', -2); // false
+
+  /*
+  includes() method is intentionally generic. It does not require this value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates includes() method called on the function's arguments object.
+  */
+  (function() {
+    console.log([].includes.call(arguments, 'a')); // true
+    console.log([].includes.call(arguments, 'd')); // false
+  })('a','b','c');
+  ```
+
+Array.prototype.indexOf()
+- Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+- Syntax
+  ```js
+  arr.indexOf(searchElement[, fromIndex])
+  ```
+- Examples
+  ```js
+  var array = [2, 9, 9];
+  array.indexOf(2);     // 0
+  array.indexOf(7);     // -1
+  array.indexOf(9, 2);  // 2
+  array.indexOf(2, -1); // -1
+  array.indexOf(2, -3); // 0
+
+  var indices = [];
+  var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+  var element = 'a';
+  var idx = array.indexOf(element);
+  while (idx != -1) {
+    indices.push(idx);
+    idx = array.indexOf(element, idx + 1);
+  }
+  console.log(indices);
+  // [0, 2, 4]
+
+  function updateVegetablesCollection (veggies, veggie) {
+    if (veggies.indexOf(veggie) === -1) {
+        veggies.push(veggie);
+        console.log('New veggies collection is : ' + veggies);
+    } else if (veggies.indexOf(veggie) > -1) {
+        console.log(veggie + ' already exists in the veggies collection.');
+    }
+  }
+
+  var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+
+  updateVegetablesCollection(veggies, 'spinach'); 
+  // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
+  updateVegetablesCollection(veggies, 'spinach'); 
+  // spinach already exists in the veggies collection.
+  ```
+
+Array.prototype.join()
+- Joins all elements of an array into a string.
+- Syntax
+  ```js
+  arr.join([separator])
+  ```
+- Examples
+  ```js
+  var a = ['Wind', 'Rain', 'Fire'];
+  a.join();      // 'Wind,Rain,Fire'
+  a.join(', ');  // 'Wind, Rain, Fire'
+  a.join(' + '); // 'Wind + Rain + Fire'
+  a.join('');    // 'WindRainFire'
+
+  function f(a, b, c) {
+    var s = Array.prototype.join.call(arguments);
+    console.log(s); // '1,a,true'
+  }
+  f(1, 'a', true);
+  //expected output: "1,a,true"
+  ```
+
+Array.prototype.lastIndexOf()
+- Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.
+- Syntax
+  ```js
+  arr.lastIndexOf(searchElement[, fromIndex])
+  ```
+- Examples
+  ```js
+  var numbers = [2, 5, 9, 2];
+  numbers.lastIndexOf(2);     // 3
+  numbers.lastIndexOf(7);     // -1
+  numbers.lastIndexOf(2, 3);  // 3
+  numbers.lastIndexOf(2, 2);  // 0
+  numbers.lastIndexOf(2, -2); // 0
+  numbers.lastIndexOf(2, -1); // 3
+
+  var indices = [];
+  var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+  var element = 'a';
+  var idx = array.lastIndexOf(element);
+  while (idx != -1) {
+    indices.push(idx);
+    idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  }
+
+  console.log(indices);
+  // [4, 2, 0]
+  ```
+
+Array.prototype.slice()
+- Extracts a section of an array and returns a new array.
+- Syntax
+  ```js
+  arr.slice([begin[, end]])
+  ```
+- Examples
+  ```js
+  var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+  var citrus = fruits.slice(1, 3);
+
+  // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+  // citrus contains ['Orange','Lemon']
+
+  // Using slice, create newCar from myCar.
+  var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+  var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+  var newCar = myCar.slice(0, 2);
+
+  // Display the values of myCar, newCar, and the color of myHonda
+  //  referenced from both arrays.
+  console.log('myCar = ' + JSON.stringify(myCar));
+  // myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+         'cherry condition', 'purchased 1997']
+  console.log('newCar = ' + JSON.stringify(newCar));
+  // newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
+  console.log('myCar[0].color = ' + myCar[0].color);
+  // myCar[0].color = red 
+  console.log('newCar[0].color = ' + newCar[0].color);
+  // newCar[0].color = red
+
+  // Change the color of myHonda.
+  myHonda.color = 'purple';
+
+  console.log('The new color of my Honda is ' + myHonda.color);
+  The new color of my Honda is purple
+
+  // Display the color of myHonda referenced from both arrays.
+  console.log('myCar[0].color = ' + myCar[0].color);
+  // myCar[0].color = purple
+  console.log('newCar[0].color = ' + newCar[0].color);
+  // newCar[0].color = purple
+
+  function list() {
+    return Array.prototype.slice.call(arguments);
+  }
+
+  var list1 = list(1, 2, 3); // [1, 2, 3]
+  
+  var unboundSlice = Array.prototype.slice;
+  var slice = Function.prototype.call.bind(unboundSlice);
+
+  function list() {
+    return slice(arguments);
+  }
+
+  var list1 = list(1, 2, 3); // [1, 2, 3]
+  ```
+
+Array.prototype.toSource() 
+- Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the Object.prototype.toSource() method.
+- Warning: Non-standard
+This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+
+Array.prototype.toString()
+- Returns a string representing the array and its elements. Overrides the Object.prototype.toString() method.
+- Syntax
+  ```js
+  arr.toString()
+  ```
+
+Array.prototype.toLocaleString()
+- Returns a localized string representing the array and its elements. Overrides the Object.prototype.toLocaleString() method.
+- Syntax
+  ```js
+  arr.toLocaleString([locales[, options]]);
+  ```
+- Examples
+  ```
+  var prices = ['￥7', 500, 8123, 12];
+  prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+
+  // "￥7,￥500,￥8,123,￥12"
+  ```
