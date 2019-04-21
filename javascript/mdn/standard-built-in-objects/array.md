@@ -944,3 +944,793 @@ Array.prototype.toLocaleString()
 
   // "￥7,￥500,￥8,123,￥12"
   ```
+
+#### Iteration methods
+Array.prototype.entries()
+- Returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+- Syntax
+  ```js
+  array.entries()
+  ```
+- Examples
+  ```js
+  const a = ['a', 'b', 'c'];
+
+  for (const [index, element] of a.entries())
+    console.log(index, element);
+
+  // [0, 'a']
+  // [1, 'b']
+  // [2, 'c']
+
+  var a = ['a', 'b', 'c'];
+  var iterator = a.entries();
+
+  for (let e of iterator) {
+    console.log(e);
+  }
+  // [0, 'a']
+  // [1, 'b']
+  // [2, 'c']
+  ```
+
+Array.prototype.every()
+- Returns true if every element in this array satisfies the provided testing function.
+- Syntax
+  ```js
+  arr.every(callback[, thisArg])
+  ```
+- Examples
+  ```js
+  function isBigEnough(element, index, array) {
+    return element >= 10;
+  }
+  [12, 5, 8, 130, 44].every(isBigEnough);   // false
+  [12, 54, 18, 130, 44].every(isBigEnough); // true
+
+  [12, 5, 8, 130, 44].every(x => x >= 10); // false
+  [12, 54, 18, 130, 44].every(x => x >= 10); // true
+  [].every(x => x >= 10); // true
+  ```
+- Tips
+  ```js
+  In particular, for an empty array, it returns true. (It is vacuously true that all elements of the empty set satisfy any given condition.)
+  ```
+
+Array.prototype.filter()
+- Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+- Syntax
+  ```js
+  var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+  ```
+- Examples
+  ```js
+  function isBigEnough(value) {
+    return value >= 10;
+  }
+
+  var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+  // filtered is [12, 130, 44]
+
+  var arr = [
+    { id: 15 },
+    { id: -1 },
+    { id: 0 },
+    { id: 3 },
+    { id: 12.2 },
+    { },
+    { id: null },
+    { id: NaN },
+    { id: 'undefined' }
+  ];
+
+  var invalidEntries = 0;
+
+  function isNumber(obj) {
+    return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
+  }
+
+  function filterByID(item) {
+    if (isNumber(item.id) && item.id !== 0) {
+      return true;
+    } 
+    invalidEntries++;
+    return false; 
+  }
+
+  var arrByID = arr.filter(filterByID);
+
+  console.log('Filtered Array\n', arrByID); 
+  // Filtered Array
+  // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
+
+  console.log('Number of Invalid Entries = ', invalidEntries); 
+  // Number of Invalid Entries = 5
+
+  const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+
+  /**
+  * Filter array items based on search criteria (query)
+  */
+  const filterItems = (arr, query) => {
+    return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) > -1);
+  };
+
+  console.log(filterItems(fruits, 'ap')); // ['apple', 'grapes']
+  console.log(filterItems(fruits, 'an')); // ['banana', 'mango', 'orange']
+  ```
+
+Array.prototype.find()
+- Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found.
+- Syntax
+  ```js
+  arr.find(callback[, thisArg])
+  ```
+- Examples
+  ```js
+  var inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+  ];
+
+  const result = inventory.find( fruit => fruit.name === 'cherries' );
+
+  console.log(inventory.find(isCherries)); 
+  // { name: 'cherries', quantity: 5 }
+
+  function isPrime(element, index, array) {
+    var start = 2;
+    while (start <= Math.sqrt(element)) {
+      if (element % start++ < 1) {
+        return false;
+      }
+    }
+    return element > 1;
+  }
+
+  console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+  console.log([4, 5, 8, 12].find(isPrime)); // 5
+
+
+  // Declare array with no element at index 2, 3 and 4
+  var array = [0,1,,,,5,6];
+
+  // Shows all indexes, not just those that have been assigned values
+  array.find(function(value, index) {
+    console.log('Visited index ' + index + ' with value ' + value); 
+  });
+
+  // Shows all indexes, including deleted
+  array.find(function(value, index) {
+
+    // Delete element 5 on first iteration
+    if (index == 0) {
+      console.log('Deleting array[5] with value ' + array[5]);
+      delete array[5];
+    }
+    // Element 5 is still visited even though deleted
+    console.log('Visited index ' + index + ' with value ' + value); 
+  });
+  // expected output:
+  // Deleting array[5] with value 5 
+  // Visited index 0 with value 0 
+  // Visited index 1 with value 1 
+  // Visited index 2 with value undefined 
+  // Visited index 3 with value undefined 
+  // Visited index 4 with value undefined 
+  // Visited index 5 with value undefined 
+  // Visited index 6 with value 6
+  ```
+
+Array.prototype.findIndex()
+- Returns the found index in the array, if an element in the array satisfies the provided testing function or -1 if not found.
+- Syntax
+  ```js
+  arr.findIndex(callback(element[, index[, array]])[, thisArg])
+  ```
+- Examples
+  ```js
+  function isPrime(element, index, array) {
+    var start = 2;
+    while (start <= Math.sqrt(element)) {
+      if (element % start < 1) {
+        return false;
+      } else {
+        start++;
+      }
+    }
+    return element > 1;
+  }
+
+  console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, not found
+  console.log([4, 6, 7, 12].findIndex(isPrime)); // 2 (array[2] is 7)
+
+
+  const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+  const index = fruits.findIndex(fruit => fruit === "blueberries");
+
+  console.log(index); // 3
+  console.log(fruits[index]); // blueberries
+  ```
+
+Array.prototype.forEach()
+- Calls a function for each element in the array.
+- Syntax
+  ```js
+  arr.forEach(function callback(currentValue [, index [, array]]) {
+    //your iterator
+  }[, thisArg]);
+  ```
+- Examples
+  ```js
+  const items = ['item1', 'item2', 'item3'];
+  const copy = [];
+
+  // before
+  for (let i=0; i<items.length; i++) {
+    copy.push(items[i]);
+  }
+
+  // after
+  items.forEach(function(item){
+    copy.push(item);
+  });
+
+
+  function logArrayElements(element, index, array) {
+    console.log('a[' + index + '] = ' + element);
+  }
+
+  // Notice that index 2 is skipped since there is no item at
+  // that position in the array.
+  [2, 5, , 9].forEach(logArrayElements);
+  // logs:
+  // a[0] = 2
+  // a[1] = 5
+  // a[3] = 9
+
+
+  function Counter() {
+    this.sum = 0;
+    this.count = 0;
+  }
+  Counter.prototype.add = function(array) {
+    array.forEach(function(entry) {
+      this.sum += entry;
+      ++this.count;
+    }, this);
+    // ^---- Note
+  };
+
+  const obj = new Counter();
+  obj.add([2, 5, 9]);
+  obj.count;
+  // 3 
+  obj.sum;
+  // 16
+
+
+  function copy(obj) {
+    const copy = Object.create(Object.getPrototypeOf(obj));
+    const propNames = Object.getOwnPropertyNames(obj);
+
+    propNames.forEach(function(name) {
+      const desc = Object.getOwnPropertyDescriptor(obj, name);
+      Object.defineProperty(copy, name, desc);
+    });
+
+    return copy;
+  }
+
+  const obj1 = { a: 1, b: 2 };
+  const obj2 = copy(obj1); // obj2 looks like obj1 now
+
+
+  var words = ['one', 'two', 'three', 'four'];
+  words.forEach(function(word) {
+    console.log(word);
+    if (word === 'two') {
+      words.shift();
+    }
+  });
+  // one
+  // two
+  // four
+  ```
+
+Array.prototype.keys()
+- Returns a new Array Iterator that contains the keys for each index in the array.
+- Syntax
+  ```js
+  arr.keys()
+  ```
+- Examples
+  ```js
+  var arr = ['a', , 'c'];
+  var sparseKeys = Object.keys(arr);
+  var denseKeys = [...arr.keys()];
+  console.log(sparseKeys); // ['0', '2']  Object.keys(arr) will ignore holes
+  console.log(denseKeys);  // [0, 1, 2]  [].keys() doesn't ignore holes
+  ```
+
+Array.prototype.map()
+- Creates a new array with the results of calling a provided function on every element in this array.
+- Syntax
+  ```js
+  var new_array = arr.map(function callback(currentValue[, index[, array]]) {
+    // Return element for new_array
+  }[, thisArg])
+  ```
+- Examples
+  ```js
+  var numbers = [1, 4, 9];
+  var roots = numbers.map(function(num) {
+    return Math.sqrt(num)
+  });
+  // roots is now [1, 2, 3]
+  // numbers is still [1, 4, 9]
+
+  var kvArray = [{key: 1, value: 10}, 
+               {key: 2, value: 20}, 
+               {key: 3, value: 30}];
+
+  var reformattedArray = kvArray.map(obj =>{ 
+    var rObj = {};
+    rObj[obj.key] = obj.value;
+    return rObj;
+  });
+  // reformattedArray is now [{1: 10}, {2: 20}, {3: 30}], 
+
+  // kvArray is still: 
+  // [{key: 1, value: 10}, 
+  //  {key: 2, value: 20}, 
+  //  {key: 3, value: 30}]
+
+  var numbers = [1, 4, 9];
+  var doubles = numbers.map(function(num) {
+    return num * 2;
+  });
+
+  // doubles is now [2, 8, 18]
+  // numbers is still [1, 4, 9]
+
+
+  var map = Array.prototype.map;
+  var a = map.call('Hello World', function(x) { 
+    return x.charCodeAt(0); 
+  });
+  // a now equals [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+
+  var elems = document.querySelectorAll('select option:checked');
+  var values = Array.prototype.map.call(elems, function(obj) {
+    return obj.value;
+  });
+
+
+  // Consider:
+  ['1', '2', '3'].map(parseInt);
+  // While one could expect [1, 2, 3]
+  // The actual result is [1, NaN, NaN]
+
+  // parseInt is often used with one argument, but takes two.
+  // The first is an expression and the second is the radix.
+  // To the callback function, Array.prototype.map passes 3 arguments: 
+  // the element, the index, the array
+  // The third argument is ignored by parseInt, but not the second one,
+  // hence the possible confusion. See the blog post for more details
+  // If the link doesn't work
+  // here is concise example of the iteration steps:
+  // parseInt(string, radix) -> map(parseInt(value, index))
+  // first iteration (index is 0): parseInt('1', 0) // results in parseInt('1', 0) -> 1
+  // second iteration (index is 1): parseInt('2', 1) // results in parseInt('2', 1) -> NaN
+  // third iteration (index is 2): parseInt('3', 2) // results in parseInt('3', 2) -> NaN
+
+  function returnInt(element) {
+    return parseInt(element, 10);
+  }
+
+  ['1', '2', '3'].map(returnInt); // [1, 2, 3]
+  // Actual result is an array of numbers (as expected)
+
+  // Same as above, but using the concise arrow function syntax
+  ['1', '2', '3'].map( str => parseInt(str) );
+
+  // A simpler way to achieve the above, while avoiding the "gotcha":
+  ['1', '2', '3'].map(Number); // [1, 2, 3]
+  // but unlike `parseInt` will also return a float or (resolved) exponential notation:
+  ['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+
+
+  var xs = ['10', '10', '10'];
+  xs = xs.map(parseInt);
+  console.log(xs);
+  // Actual result of 10,NaN,2 may be unexpected based on the above description.
+  ```
+
+Array.prototype.reduce()
+- Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.
+- Syntax
+  ```js
+  arr.reduce(callback[, initialValue])
+  ```
+- Examples
+  ```js
+  var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+  var maxCallback2 = ( max, cur ) => Math.max( max, cur );
+
+  // reduce() without initialValue
+  [ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
+  [ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }
+  [                      ].reduce( maxCallback ); // TypeError
+
+  // map/reduce; better solution, also works for empty or larger arrays
+  [ { x: 22 }, { x: 42 } ].map( el => el.x )
+                          .reduce( maxCallback2, -Infinity );
+
+  // How reduce() works
+  [0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+    return accumulator + currentValue;
+  });
+  ```
+  callback | accumulator | currentValue	|currentIndex | array | return value
+  ---|---|---|---|---|---
+  first call |	0	| 1	| 1	| [0, 1, 2, 3, 4]	| 1
+  second call	| 1	| 2	| 2	| [0, 1, 2, 3, 4]	| 3
+  third call |	3	| 3	| 3	| [0, 1, 2, 3, 4]	| 6
+  fourth call	| 6	| 4	| 4	| [0, 1, 2, 3, 4]	| 10
+
+  ```js
+  // use arrow function
+  [0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) => accumulator + currentValue );
+
+  // provide an initial value to the second argument to reduce()
+  [0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) => {
+    return accumulator + currentValue;
+  }, 10);
+  ```
+  callback | accumulator | currentValue	|currentIndex | array | return value
+  ---|---|---|---|---|---
+  first call |	10	| 0	| 0	| [0, 1, 2, 3, 4]	| 10
+  second call |	10	| 1	| 1	| [0, 1, 2, 3, 4]	| 11
+  third call	| 11	| 2	| 2	| [0, 1, 2, 3, 4]	| 13
+  fourth call |	13	| 3	| 3	| [0, 1, 2, 3, 4]	| 16
+  fifth call	| 16	| 4	| 4	| [0, 1, 2, 3, 4]	| 20
+  ```js
+  var initialValue = 0;
+  var sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (accumulator, currentValue) {
+      return accumulator + currentValue.x;
+  },initialValue)
+
+  console.log(sum) // logs 6
+
+  // written with an arrow function
+  var initialValue = 0;
+  var sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
+      (accumulator, currentValue) => accumulator + currentValue.x
+      ,initialValue
+  );
+
+  console.log(sum) // logs 6
+
+
+  var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+    function(accumulator, currentValue) {
+      return accumulator.concat(currentValue);
+    },
+    []
+  );
+  // flattened is [0, 1, 2, 3, 4, 5]
+
+  var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+    ( accumulator, currentValue ) => accumulator.concat(currentValue),
+    []
+  );
+
+
+  var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+  var countedNames = names.reduce(function (allNames, name) { 
+    if (name in allNames) {
+      allNames[name]++;
+    }
+    else {
+      allNames[name] = 1;
+    }
+    return allNames;
+  }, {});
+  // countedNames is:
+  // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+
+
+  var people = [
+    { name: 'Alice', age: 21 },
+    { name: 'Max', age: 20 },
+    { name: 'Jane', age: 20 }
+  ];
+
+  function groupBy(objectArray, property) {
+    return objectArray.reduce(function (acc, obj) {
+      var key = obj[property];
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(obj);
+      return acc;
+    }, {});
+  }
+
+  var groupedPeople = groupBy(people, 'age');
+  // groupedPeople is:
+  // { 
+  //   20: [
+  //     { name: 'Max', age: 20 }, 
+  //     { name: 'Jane', age: 20 }
+  //   ], 
+  //   21: [{ name: 'Alice', age: 21 }] 
+  // }
+
+
+  // friends - an array of objects 
+  // where object field "books" - list of favorite books 
+  var friends = [{
+    name: 'Anna',
+    books: ['Bible', 'Harry Potter'],
+    age: 21
+  }, {
+    name: 'Bob',
+    books: ['War and peace', 'Romeo and Juliet'],
+    age: 26
+  }, {
+    name: 'Alice',
+    books: ['The Lord of the Rings', 'The Shining'],
+    age: 18
+  }];
+
+  // allbooks - list which will contain all friends' books +  
+  // additional list contained in initialValue
+  var allbooks = friends.reduce(function(accumulator, currentValue) {
+    return [...accumulator, ...currentValue.books];
+  }, ['Alphabet']);
+
+  // allbooks = [
+  //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace', 
+  //   'Romeo and Juliet', 'The Lord of the Rings',
+  //   'The Shining'
+  // ]
+
+  // Remove duplicate items in array
+  var myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd'];
+  var myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
+    if (accumulator.indexOf(currentValue) === -1) {
+      accumulator.push(currentValue);
+    }
+    return accumulator
+  }, [])
+
+  console.log(myOrderedArray);
+
+  // Running Promises in Sequence
+  /**
+  * Runs promises from array of functions that can return promises
+  * in chained manner
+  *
+  * @param {array} arr - promise arr
+  * @return {Object} promise object
+  */
+  function runPromiseInSequence(arr, input) {
+    return arr.reduce(
+      (promiseChain, currentFunction) => promiseChain.then(currentFunction),
+      Promise.resolve(input)
+    );
+  }
+
+  // promise function 1
+  function p1(a) {
+    return new Promise((resolve, reject) => {
+      resolve(a * 5);
+    });
+  }
+
+  // promise function 2
+  function p2(a) {
+    return new Promise((resolve, reject) => {
+      resolve(a * 2);
+    });
+  }
+
+  // function 3  - will be wrapped in a resolved promise by .then()
+  function f3(a) {
+    return a * 3;
+  }
+
+  // promise function 4
+  function p4(a) {
+    return new Promise((resolve, reject) => {
+      resolve(a * 4);
+    });
+  }
+
+  const promiseArr = [p1, p2, f3, p4];
+  runPromiseInSequence(promiseArr, 10)
+    .then(console.log);   // 1200
+
+  // Function composition enabling piping
+  // Building-blocks to use for composition
+  const double = x => x + x;
+  const triple = x => 3 * x;
+  const quadruple = x => 4 * x;
+
+  // Function composition enabling pipe functionality
+  const pipe = (...functions) => input => functions.reduce(
+      (acc, fn) => fn(acc),
+      input
+  );
+
+  // Composed functions for multiplication of specific values
+  const multiply6 = pipe(double, triple);
+  const multiply9 = pipe(triple, triple);
+  const multiply16 = pipe(quadruple, quadruple);
+  const multiply24 = pipe(double, triple, quadruple);
+
+  // Usage
+  multiply6(6); // 36
+  multiply9(9); // 81
+  multiply16(16); // 256
+  multiply24(10); // 240
+
+  // write map using reduce
+  if (!Array.prototype.mapUsingReduce) {
+    Array.prototype.mapUsingReduce = function(callback, thisArg) {
+      return this.reduce(function(mappedArray, currentValue, index, array) {
+        mappedArray[index] = callback.call(thisArg, currentValue, index, array);
+        return mappedArray;
+      }, []);
+    };
+  }
+
+  [1, 2, , 3].mapUsingReduce(
+    (currentValue, index, array) => currentValue + index + array.length
+  ); // [5, 7, , 10]
+  ```
+
+Array.prototype.reduceRight()
+- Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
+- Syntax
+  ```js
+  arr.reduceRight(callback[, initialValue])
+  ```
+- Examples
+  ```js
+  [0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+    return accumulator + currentValue;
+  });
+  ```
+  callback | accumulator | currentValue	|currentIndex | array | return value
+  ---|---|---|---|---|---
+  first call |	4	| 3	| 3	| [0, 1, 2, 3, 4]	| 7
+  second call	| 7	| 3	| 2	| [0, 1, 2, 3, 4]	| 9
+  third call |	9	| 2	| 1	| [0, 1, 2, 3, 4]	| 10
+  fourth call	| 10	| 0	| 0	| [0, 1, 2, 3, 4]	| 10
+  ```js
+  [0, 1, 2, 3, 4].reduceRight(function(accumulator, currentValue, index, array) {
+    return accumulator + currentValue;
+  }, 10);
+  ```
+  callback | accumulator | currentValue	|currentIndex | array | return value
+  ---|---|---|---|---|---
+  first call |	10	| 4	| 4	| [0, 1, 2, 3, 4]	| 14
+  second call |	14	| 3	| 3	| [0, 1, 2, 3, 4]	| 17
+  third call	| 17	| 3	| 2	| [0, 1, 2, 3, 4]	| 19
+  fourth call |	19	| 2	| 1	| [0, 1, 2, 3, 4]	| 20
+  fifth call	| 20	| 0	| 0	| [0, 1, 2, 3, 4]	| 20
+  ```js
+  var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+    return a.concat(b);
+  }, []);
+  // flattened is [4, 5, 2, 3, 0, 1]
+
+
+  // Difference between reduce and reduceRight
+  var a = ['1', '2', '3', '4', '5']; 
+  var left  = a.reduce(function(prev, cur)      { return prev + cur; }); 
+  var right = a.reduceRight(function(prev, cur) { return prev + cur; }); 
+
+  console.log(left);  // "12345"
+  console.log(right); // "54321"
+  ```
+
+Array.prototype.some()
+- Returns true if at least one element in this array satisfies the provided testing function.
+- Syntax
+  ```js
+  arr.some(callback(element[, index[, array]])[, thisArg])
+  ```
+- Examples
+  ```js
+  function isBiggerThan10(element, index, array) {
+    return element > 10;
+  }
+
+  [2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+  [12, 5, 8, 1, 4].some(isBiggerThan10); // true
+
+  // Arrow functions provide a shorter syntax
+  [2, 5, 8, 1, 4].some(x => x > 10);  // false
+  [12, 5, 8, 1, 4].some(x => x > 10); // true
+
+
+  var fruits = ['apple', 'banana', 'mango', 'guava'];
+
+  function checkAvailability(arr, val) {
+    return arr.some(arrVal => val === arrVal);
+  }
+
+  checkAvailability(fruits, 'kela');   // false
+  checkAvailability(fruits, 'banana'); // true
+
+  var TRUTHY_VALUES = [true, 'true', 1];
+
+  function getBoolean(value) {
+    'use strict';
+    
+    if (typeof value === 'string') {
+      value = value.toLowerCase().trim();
+    }
+
+    return TRUTHY_VALUES.some(function(t) {
+      return t === value;
+    });
+  }
+
+  getBoolean(false);   // false
+  getBoolean('false'); // false
+  getBoolean(1);       // true
+  getBoolean('true');  // true
+  ```
+
+Array.prototype.values()
+- Returns a new Array Iterator object that contains the values for each index in the array.
+- Syntax
+  ```js
+  arr.values() // Returns A new Array iterator object.
+  ```
+- Examples
+  ```js
+  var arr = ['a', 'b', 'c', 'd', 'e'];
+  var iterator = arr.values();
+
+  for (let letter of iterator) {
+    console.log(letter);
+  }
+  // Array.prototype.values is default implementation of Array.prototype[Symbol.iterator].
+  Array.prototype.values === Array.prototype[Symbol.iterator]      //true
+  ```
+
+Array.prototype[@@iterator]()
+- Returns a new Array Iterator object that contains the values for each index in the array.
+- Syntax
+  ```js
+  arr[Symbol.iterator]()
+  // The initial value given by the values() iterator. By default, using arr[Symbol.iterator] will return the values() function.
+  ```
+- Examples
+  ```js
+  var arr = ['a', 'b', 'c', 'd', 'e'];
+  var eArr = arr[Symbol.iterator]();
+  // your browser must support for..of loop
+  // and let-scoped variables in for loops
+  // const and var could also be used
+  for (let letter of eArr) {
+    console.log(letter);
+  }
+
+
+  var arr = ['a', 'b', 'c', 'd', 'e'];
+  var eArr = arr[Symbol.iterator]();
+  console.log(eArr.next().value); // a
+  console.log(eArr.next().value); // b
+  console.log(eArr.next().value); // c
+  console.log(eArr.next().value); // d
+  console.log(eArr.next().value); // e
+  ```
