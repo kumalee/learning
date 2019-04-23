@@ -150,6 +150,58 @@ These global properties return a simple value; they have no properties or method
     ```
 
 ## Function properties
+These global functions—functions which are called globally rather than on an object—directly return their results to the caller.
+
+### eval()
+- The eval() function evaluates JavaScript code represented as a string.
+- Syntax
+    ```js
+    eval(string)
+    ```
+- Examples
+    ```js
+    eval(new String('2 + 2')); // returns a String object containing "2 + 2"
+    eval('2 + 2');             // returns 4
+
+    var expression = new String('2 + 2');
+    eval(expression.toString());            // returns 4
+
+    function test() {
+        var x = 2, y = 4;
+        console.log(eval('x + y'));  // Direct call, uses local scope, result is 6
+        var geval = eval; // equivalent to calling eval in the global scope
+        console.log(geval('x + y')); // Indirect call, uses global scope, throws ReferenceError because `x` is undefined
+        (0, eval)('x + y'); // another example of Indirect call
+    }
+    ```
+- **Do NOT use eval**
+    ```js
+    eval() is a dangerous function, which executes the code it's passed with the privileges of the caller.
+
+    eval() is also slower than the alternatives, since it has to invoke the JS interpreter, while many other constructs are optimized by modern JS engines.
+
+    Additionally, modern javascript interpreters convert javascript to machine code. This means that any concept of variable naming gets obliterated.
+
+    Additonally, new things can be introduced to that variable through eval() such as changing the type of that variable, forcing the browser to reevaluate all of the generated machine code to compensate. 
+    ```
+### uneval() **Non-standard**
+- The uneval() function creates a string representation of the source code of an Object.
+- This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.
+- Syntax
+    ```js
+    uneval(object)
+    ```
+
+### isFinite()
+### isNaN()
+### parseFloat()
+### parseInt()
+### decodeURI()
+### decodeURIComponent()
+### encodeURI()
+### encodeURIComponent()
+### escape() 
+### unescape()
 
 ## Fundamental objects
 
