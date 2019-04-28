@@ -2,12 +2,23 @@ import { module, test } from 'qunit';
 import { click, visit, currentURL, fillIn, triggerKeyEvent } from '@ember/test-helpers';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import { setupApplicationTest } from 'ember-qunit';
+import Service from '@ember/service';
+
+let StubMapsService = Service.extend({
+  getMapElement() {
+    return Promise.resolve(document.createElement('div'));
+  }
+});
 
 module('Acceptance | list rentals', function(hooks) {
   // This `setupApplicationTest` function ensures that
   // your Ember application is started and shut down between each test.
   setupApplicationTest(hooks);
   setupMirage(hooks);
+
+  hooks.beforeEach(function() {
+    this.owner.register('service:map-element', StubMapsService);
+  });
 
   /**
    * QUnit passes in an object called an assert to each test function.
