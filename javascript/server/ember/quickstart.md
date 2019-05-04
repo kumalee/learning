@@ -1,5 +1,7 @@
 # Quick Start
-[Doc](https://guides.emberjs.com/release/getting-started/quick-start/)
+[Docs](https://guides.emberjs.com/release/getting-started/quick-start/)
+
+[Addons](https://www.emberobserver.com/)
 
 # Install
 ```
@@ -25,3 +27,4 @@ Serving on http://localhost:4200/
 
 # Core Concepts
 ![Core Concepts](https://guides.emberjs.com/images/ember-core-concepts/ember-core-concepts.png)
+
