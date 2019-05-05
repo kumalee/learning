@@ -16,11 +16,24 @@
 3. [Musopen](https://musopen.org/)
 4. [Jewelbeat Free Background Music](http://www.jewelbeat.com/free/free-background-music.htm)
 5. [Incompetech Free Music](https://incompetech.com/music/royalty-free/)
+6. [Icons8 Music](https://icons8.com/music/)
+7. [甘茶の音楽工房](http://amachamusic.chagasi.com/index.html)
+8. [Dust Sounds](http://dust-sounds.com/)
+9. [Tam Music](https://www.tam-music.com/)
+10. [フリー効果音素材 くらげ工匠](http://www.kurage-kosho.info/)
+
+# PC related
+## screenshot related
+1. [Picpick](https://picpick.app/zh-tw/)
+
+# Collection related
+1. [Chicago Museum](https://www.artic.edu/collection)
 
 # Design related
 
 ## color related
 1. [Brand Colors](http://brandcolors.net/)
+2. [Google Art Palette](https://artsexperiments.withgoogle.com/artpalette/)
 
 ## image related
 ### Single Image resources
@@ -58,13 +71,13 @@
 3. [Image Compress by Google](https://squoosh.app/)
 4. [Tinypng](https://tinypng.com/)
 
-## gif maker
+## gif related
 1. [Free Gif Maker](http://freegifmaker.me/)
 2. [Imgur Video to GIF](https://imgur.com/vidgif)
 
-## screenshot
-1. [Picpick](https://picpick.app/zh-tw/)
-
+## background video related
+1. [Coverr](http://www.coverr.co/)
+2. [Videezy](https://www.videezy.com/)
 
 # Develop related
 
@@ -83,12 +96,18 @@
 ## Performance Test
 1. [LoadImpact - website performance](https://loadimpact.com/)
 
+## A11y Test
+1. [Koa11y](https://open-indy.github.io/Koa11y/)
+
 ## image placeholder
 1. [Placeholder](https://placeholder.com/)
 
 ## text placeholder
 1. [拉丁文生成](https://loripsum.net/)
 2. [繁体中文生成](http://more.handlino.com/)
+
+## webfont
+1. [Paymentfont](https://paymentfont.com/)
 
 ## OCR and PDF
 1. [NewOCR](https://www.newocr.com/)
@@ -101,3 +120,6 @@
 
 ## Landing Page Template
 1. [Cruip](https://cruip.com/)
+
+# Writing
+1. [Microsoft Office Template](https://templates.office.com/)
