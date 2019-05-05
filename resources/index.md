@@ -1,13 +1,21 @@
 # Index Site
-1. [Free.Com.Tw](https://free.com.tw/)
-2. [Evernote.Design](https://evernote.design)
-3. [Miku.Tools](https://miku.tools/)
+1. [Free.Com.Tw - For Everyone](https://free.com.tw/)
+2. [Miku.Tools - For Everyone](https://miku.tools/)
+3. [Evernote.Design - For Designer](https://evernote.design)
+4. [PostMake.Io - For Startup](https://postmake.io/)
 
 # Apple related
 1. [Global price comparation of Apple's products](https://themacindex.com/)
 
 # Personal Info Download Related
 1. [Instagram](https://www.instagram.com/download/request/)
+
+# Music related
+1. [Jamendo](https://www.jamendo.com/?language=en)
+2. [Free Sound](https://freesound.org/browse/tags/music/)
+3. [Musopen](https://musopen.org/)
+4. [Jewelbeat Free Background Music](http://www.jewelbeat.com/free/free-background-music.htm)
+5. [Incompetech Free Music](https://incompetech.com/music/royalty-free/)
 
 # Design related
 
@@ -26,6 +34,12 @@
 3. [Pixelmob](https://pixelmob.co/)
 4. [VisualHunt](https://visualhunt.com/)
 5. [TheStocks](http://thestocks.im/)
+
+### Landing Page
+1. [LandingStock](https://landingstock.com/)
+
+### Frames
+1. [Frrames - For Browsers cross platforms](https://frrames.com/)
 
 ## pattern related
 1. [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
@@ -54,12 +68,20 @@
 
 # Develop related
 
-## page speed test
+## page speed test and optimize
 1. [keycdn speed](https://tools.keycdn.com/speed)
 2. [Think with google](https://www.thinkwithgoogle.com/feature/testmysite)
 3. [Pingdom](https://tools.pingdom.com/)
 4. [GTmetrix](https://gtmetrix.com/)
 5. [WebPageTest](https://www.webpagetest.org/)
+6. [Web.Dev](https://web.dev/)
+
+## Monitor
+1. [CronHub - cronjob](https://cronhub.io/)
+2. [Uptimerrobot - Website](https://uptimerobot.com/)
+
+## Performance Test
+1. [LoadImpact - website performance](https://loadimpact.com/)
 
 ## image placeholder
 1. [Placeholder](https://placeholder.com/)
@@ -71,3 +93,11 @@
 ## OCR and PDF
 1. [NewOCR](https://www.newocr.com/)
 2. [PDFYeah](https://www.pdfyeah.com/)
+
+## Privacy Policy Template
+1. [English](https://www.privacypolicies.com/)
+2. [English](https://github.com/tomlowenthal/privacy-policy-template)
+3. [Chinese TW](https://github.com/lyrasoft/chinese-privacy-policy-template)
+
+## Landing Page Template
+1. [Cruip](https://cruip.com/)
