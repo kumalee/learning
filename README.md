@@ -23,6 +23,7 @@
 * [Photography](#Photography)
 * [PostgreSQL](#PostgreSQL)
 * [Python](#Python)
+* [Resources](#Resources)
 * [SEO](#SEO)
 * [Software](#Software)
 * [Swift](#Swift)
@@ -113,6 +114,8 @@ A delightful community-driven (with 1,300+ contributors) framework for managing 
 
 ## Python
 /ˈpaɪˌθɑn/ Python 编程语言
+
+## Resources
 
 ## SEO
 
