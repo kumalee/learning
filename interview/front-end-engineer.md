@@ -84,6 +84,37 @@ use codepen to do some dribbble sample layout
 
 [What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
 
+A closure is the combination of a function and the lexical environment within which that function was declared.
+
+For every closure we have three scopes:-
+* Local Scope (Own scope)
+* Outer Functions Scope
+* Global Scope
+
+```js
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+```
+
+1. Emulating private methods with closures
+2. Closure Scope Chain
+
+* Creating closures in loops: A common mistake
+* Performance considerations:
+
+    negatively affects:
+    1. processing speed
+    2. memory consumption
+
+    The reason is that whenever the constructor is called, the methods would get reassigned (that is, for every object creation).
+
+
 [What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
 
 [10 Interview Questions
