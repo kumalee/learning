@@ -3,6 +3,8 @@
 2. [Miku.Tools - For Everyone](https://miku.tools/)
 3. [Evernote.Design - For Designer](https://evernote.design)
 4. [PostMake.Io - For Startup](https://postmake.io/)
+5. [Search the world's largest, most accurate site for today in history](https://www.onthisday.com/)
+6. [Visa Type](https://visalist.io/)
 
 # Apple related
 1. [Global price comparation of Apple's products](https://themacindex.com/)
@@ -51,8 +53,9 @@
 ### Landing Page
 1. [LandingStock](https://landingstock.com/)
 
-### Frames
+### Mockup & Frames
 1. [Frrames - For Browsers cross platforms](https://frrames.com/)
+2. [Artborad Studio - Product Mockups Made Easy](https://artboard.studio/)
 
 ## pattern related
 1. [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
@@ -81,6 +84,9 @@
 
 # Develop related
 
+## Exception, Performance and Moniter
+1. [Ryte - Your website, just better](https://en.ryte.com/)
+
 ## page speed test and optimize
 1. [keycdn speed](https://tools.keycdn.com/speed)
 2. [Think with google](https://www.thinkwithgoogle.com/feature/testmysite)
@@ -88,16 +94,23 @@
 4. [GTmetrix](https://gtmetrix.com/)
 5. [WebPageTest](https://www.webpagetest.org/)
 6. [Web.Dev](https://web.dev/)
+7. [Test MySite](https://testmysite.io/)
 
 ## Monitor
 1. [CronHub - cronjob](https://cronhub.io/)
 2. [Uptimerrobot - Website](https://uptimerobot.com/)
+3. [Email tracker](https://snov.io/email-tracker)
 
 ## Performance Test
 1. [LoadImpact - website performance](https://loadimpact.com/)
 
 ## A11y Test
 1. [Koa11y](https://open-indy.github.io/Koa11y/)
+
+## SEO
+1. [Metatags Preview](https://metatags.io/)
+2. [SocialSizes - Diff size for images/vidoes for multiplatform](https://socialsizes.io/)
+3. [Stories video editor for Facebook/Instgram/Snapchat](https://insense.pro/stories-video-editor/)
 
 ## image placeholder
 1. [Placeholder](https://placeholder.com/)
@@ -121,5 +134,13 @@
 ## Landing Page Template
 1. [Cruip](https://cruip.com/)
 
+## Get User's Platform Infos
+1. [Yourkit.pw](https://yourkit.pw/)
+2. [Get screenshot for current page](https://screen.guru/)
+
 # Writing
 1. [Microsoft Office Template](https://templates.office.com/)
+
+# Generate Fake Account Info
+1. [Reggy](https://chrome.google.com/webstore/detail/reggy/pnneajlgffpejnabhionnhdfhibijihe)
+2. [Password Checkup](https://chrome.google.com/webstore/detail/password-checkup/pncabnpcffmalkkjpajodfhijclecjno)
