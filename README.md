@@ -64,6 +64,9 @@ Git is a free and open source distributed version control system designed to han
 ## Go
 /ɡo/ Go 编程语言
 
+## Google
+/gu:gl/ Google Search Engine
+
 ## Gym
 /dʒɪm/ 健身
 
