@@ -56,6 +56,7 @@
 ### Mockup & Frames
 1. [Frrames - For Browsers cross platforms](https://frrames.com/)
 2. [Artborad Studio - Product Mockups Made Easy](https://artboard.studio/)
+3. [Printable Grids for Design Wireframing](https://sneakpeekit.com/)
 
 ## pattern related
 1. [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
@@ -144,3 +145,10 @@
 # Generate Fake Account Info
 1. [Reggy](https://chrome.google.com/webstore/detail/reggy/pnneajlgffpejnabhionnhdfhibijihe)
 2. [Password Checkup](https://chrome.google.com/webstore/detail/password-checkup/pncabnpcffmalkkjpajodfhijclecjno)
+
+# Tools for freelancers
+1. [Flowmagic](https://www.flowmagic.co)
+2. [Timeline Tracking]
+3. [Payment Tracking]
+4. [Trello]
+5. [Reports of timeline, payment]
