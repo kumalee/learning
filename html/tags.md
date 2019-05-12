@@ -1,0 +1,130 @@
+# Main Root
+## <html>
+# Document metadata
+## <base>
+## <head>
+## <link>
+## <meta>
+## <style>
+## <title>
+# Sectioning Root
+## <body>
+# Content Sectioning
+## <address>
+## <article>
+## <aside>
+## <footer>
+## <header>
+## <h1>~<h6>
+## <hgroup>
+## <main>
+## <nav>
+## <section>
+# Text Content
+## <blockquote>
+## <dd>
+## <dir>
+## <div>
+## <dl>
+## <dt>
+## <figcapton>
+## <figure>
+## <hr>
+## <li>
+## <main>
+## <ol>
+## <p>
+## <pre>
+## <ul>
+# Inline text semantics
+## <a>
+## <abbr>
+## <b>
+## <bdi>
+## <bdo>
+## <br>
+## <cite>
+## <code>
+## <data>
+## <dfn>
+## <em>
+## <i>
+## <kbd>
+## <mark>
+## <q>
+## <rb>
+## <rp>
+## <rtc>
+## <ruby>
+## <s>
+## <samp>
+## <small>
+## <span>
+## <strong>
+## <sub>
+## <sup>
+## <time>
+## <tt>
+## <u>
+## <var>
+## <wbr>
+# Image and multimedia
+## <area>
+## <audio>
+## <img>
+## <track>
+## <video>
+# Embedded content
+## <applet>
+## <embed>
+## <iframe>
+## <noembed>
+## <object>
+## <param>
+## <picture>
+## <source>
+# Scripting
+## <canvas>
+## <noscript>
+## <script>
+# Demarcating edits
+## <del>
+## <ins>
+# Table content
+## <caption>
+## <col>
+## <colgroup>
+## <table>
+## <tbody>
+## <td>
+## <tfoot>
+## <th>
+## <thead>
+## <tr>
+# Forms
+## <button>
+## <datalist>
+## <fieldset>
+## <form>
+## <input>
+## <label>
+## <legend>
+## <meter>
+## <optgroup>
+## <option>
+## <output>
+## <progress>
+## <select>
+## <textarea>
+# Interactive elements
+## <details>
+## <dialog>
+## <menu>
+## <menuitem>
+## <summary>
+# Web Components
+## <content>
+## <element>
+## <shadow>
+## <slot>
+## <template>
