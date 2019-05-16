@@ -134,5 +134,7 @@ A delightful community-driven (with 1,300+ contributors) framework for managing 
 ## Unity
 /'junəti/ Unity 游戏动画开发平台
 
+## VIM
+
 ## VSCode
 /vskod/ Visual /'vɪʒʊəl/ Studio /'studɪo/ Code /kod/
