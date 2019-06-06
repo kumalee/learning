@@ -62,7 +62,7 @@
 1. [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
 
 ## icon related
-1. https://gallery.manypixels.co/
+1. [Icons for everything](https://thenounproject.com/)
 
 ## logo related
 1. [Instant Logo](http://instantlogosearch.com/)
@@ -126,6 +126,13 @@
 ## OCR and PDF
 1. [NewOCR](https://www.newocr.com/)
 2. [PDFYeah](https://www.pdfyeah.com/)
+
+## HTML TO PDF
+1. [wkHTMLtoPDF](https://wkhtmltopdf.org/)
+
+    ### articles:
+
+    1. https://cloud.tencent.com/developer/article/1337168
 
 ## Privacy Policy Template
 1. [English](https://www.privacypolicies.com/)
