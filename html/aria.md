@@ -55,6 +55,7 @@
     ```
         **NOTE**:
         Neither <object> nor <iframe> worked in Chrome. Chrome sees the fallback content, so you could throw alt text in there, which would be a third (or fourth) place to store the same content.
+7. [Accessibility](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 
 # JavaScript Libs
 * [Toolkit for building accessible rich web apps with React](https://github.com/reakit/reakit)
