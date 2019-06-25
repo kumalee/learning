@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Enzyme: <Header> and <Link> Shallow 1`] = `
+<h1>
+  <Link
+    page="https://www.facebook.com/"
+  >
+    Facebook
+  </Link>
+</h1>
+`;
+
+exports[`Enzyme: <Header> and <Link> mount 1`] = `
+<Header>
+  <h1>
+    <Link
+      page="https://www.facebook.com/"
+    >
+      <a
+        href="https://www.facebook.com/"
+        onClick={[Function]}
+      >
+        Facebook
+        1
+      </a>
+    </Link>
+  </h1>
+</Header>
+`;
+
+exports[`Enzyme: <Header> and <Link> render 1`] = `
+<h1>
+  <a
+    href="https://www.facebook.com/"
+  >
+    Facebook0
+  </a>
+</h1>
+`;

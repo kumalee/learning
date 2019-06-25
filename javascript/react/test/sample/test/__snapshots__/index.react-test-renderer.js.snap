@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> and <Link> ShallowRenderer 1`] = `
+<h1>
+  <Link
+    page="https://www.facebook.com/"
+  >
+    Facebook
+  </Link>
+</h1>
+`;
+
+exports[`<Header> and <Link> testRenderer 1`] = `
+<h1>
+  <a
+    href="https://www.facebook.com/"
+    onClick={[Function]}
+  >
+    Facebook
+    0
+  </a>
+</h1>
+`;
