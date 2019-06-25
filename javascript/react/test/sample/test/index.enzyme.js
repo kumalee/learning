@@ -14,7 +14,9 @@ describe('Enzyme: <Header> and <Link>', () => {
     expect(shallowWrapper.props().children).toStrictEqual(<Link page="https://www.facebook.com/">Facebook</Link>);
     expect(shallowWrapper.find(Link).props().children).toBe('Facebook');
     expect(shallowWrapper.find(Link).props().page).toBe('https://www.facebook.com/');
-    expect(shallowWrapper.find(Link).render().text()).toBe('Facebook0');
+    const childWrapper = shallowWrapper.find(Link).render();
+    expect(childWrapper.is('a')).toBe(true);
+    expect(childWrapper.text()).toBe('Facebook0');
     expect(shallowWrapper).toMatchSnapshot();
   });
 
