@@ -10,7 +10,7 @@ describe('Enzyme: <Header> and <Link>', () => {
         <Link page="https://www.facebook.com/">Facebook</Link>
       </Header>
     );
-    expect(shallowWrapper.type()).toBe('h1');
+    expect(shallowWrapper.name()).toBe('h1');
     expect(shallowWrapper.props().children).toStrictEqual(<Link page="https://www.facebook.com/">Facebook</Link>);
     expect(shallowWrapper.find(Link).props().children).toBe('Facebook');
     expect(shallowWrapper.find(Link).props().page).toBe('https://www.facebook.com/');
@@ -26,7 +26,7 @@ describe('Enzyme: <Header> and <Link>', () => {
         <Link page="https://www.facebook.com/">Facebook</Link>
       </Header>
     );
-    expect(mountWrapper.find('h1')).toHaveLength(1);
+    expect(mountWrapper.name()).toBe('Header');
     expect(mountWrapper.props().children).toStrictEqual(<Link page="https://www.facebook.com/">Facebook</Link>);
     expect(mountWrapper.find('Link').props().children).toBe('Facebook');
     console.log(mountWrapper.debug());
