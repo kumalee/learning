@@ -868,7 +868,17 @@
 
 
 
-
+预约餐厅
+店：hai, o de wa a li a do go za i ma su， xxx resturant de su. 你好，感谢致电，这里是xx餐厅。
+客：moshimoshi, se ke o yo ya ku shi da in de su ke do. 你好，我想预约座位。
+店：hai，o hi ni ji wa i tsu de sho ka? 请问是什么时候呐？
+客：kyo no nana ji ni iki ta i de su nga, a i te i de su ka? 今天的7点想去，还有席位嘛？
+店：hai，kyo no ju ku ji de su ne？ 好的，今晚19点是嘛
+客：hai 是的
+店：hai，nan me sa ma de sho ga？ 好的，请问您一共几位？
+客：si mi ma sen，mo i ji do o ne nga i xi ma su 对不起，您能再说一次嘛？
+店：hai，nan me sa me de sho ka 请问您一共多少人呢
+店：5 人 de su 五位
 
 
  
