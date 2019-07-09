@@ -11,6 +11,7 @@ summary: react-test-renderer is simple, enzyme is more ambitious
 Let's compared how they perform in the following criteria
 
 ## API Count
+```js
 react-test-renderer: {
     testRenderer: {
         apiCount: 1,
@@ -59,6 +60,7 @@ enzyme: {
         },
     },
 }
+```
 
 ## Learning Curve
 Winner: react-test-renderer
