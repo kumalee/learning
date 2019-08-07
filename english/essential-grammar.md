@@ -362,5 +362,10 @@ Do your parents speak English? Yes, they do.
 Does James work hard? Yes, he does.
 Does your sister live in London? No, she doesn't.
 
+8. I'm doing (present continuous) and I do (present simple)
+Is he playing guitar? No, he isn't. (present continuous)
+Does he play guitar? Yes, he does. (present simple)
 
+We do not use these verbs in the present continuous
+like, want, know, understand, remember, prefer, need, mean, believe, forget
 
