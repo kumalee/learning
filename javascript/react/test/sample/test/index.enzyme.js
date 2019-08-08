@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-import toJson from 'enzyme-to-json';
 import { Header, Link } from '../src';
 
 describe('Enzyme: <Header> and <Link>', () => {
@@ -37,7 +36,7 @@ describe('Enzyme: <Header> and <Link>', () => {
     console.log(mountWrapper.debug());
     // ReactWrapper::state() can only be called on class components
     // expect(mountWrapper.find(Link).state().count).toBe(1);
-    expect(toJson(mountWrapper)).toMatchSnapshot();
+    expect(mountWrapper).toMatchSnapshot();
   });
 
   it('render', () => {
@@ -46,6 +45,6 @@ describe('Enzyme: <Header> and <Link>', () => {
         <Link page="https://www.facebook.com/">Facebook</Link>
       </Header>
     );
-    expect(toJson(cheerioWrapper)).toMatchSnapshot();
+    expect(cheerioWrapper).toMatchSnapshot();
   });
 });
