@@ -358,14 +358,49 @@ No, I/we/your/they don't.
 No, he/she/it doesn't.
 
 Do you play the guitar? No, I don't.
+
 Do your parents speak English? Yes, they do.
+
 Does James work hard? Yes, he does.
+
 Does your sister live in London? No, she doesn't.
 
 8. I'm doing (present continuous) and I do (present simple)
+
 Is he playing guitar? No, he isn't. (present continuous)
+
 Does he play guitar? Yes, he does. (present simple)
 
 We do not use these verbs in the present continuous
+
 like, want, know, understand, remember, prefer, need, mean, believe, forget
+
+9. I have ... and I've got ...
+
+I/we/you/they have/have got
+
+I/we/you/they 've got
+
+he/she/it has/has got
+
+he/she/it 's got
+
+I/you/we/they don't have / haven't got
+
+he/she/it doesn't have / hasn't got
+
+do I/you/we/they have - have I/you/we/they got
+
+does he/she/it have - has he/she/it got
+
+10. was/were
+
+I/he/she/it was/was not(wasn't)
+
+we/you/they were/were not(weren't)
+
+was I/he/she/it?
+
+were we/you/they?
+
 
