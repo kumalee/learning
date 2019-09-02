@@ -82,3 +82,4 @@
 2. [Lettering.js - A lightweight, easy to use Javascript <span> injector for radical Web Typography](https://github.com/davatron5000/Lettering.js)
 3. [Typed.js - A JavaScript Typing Animation Library](https://github.com/mattboldt/typed.js/)
 4. [React-Reveal-Text - A small react library for animating the revealing of text.](https://github.com/adrianmcli/react-reveal-text)
+
