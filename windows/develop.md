@@ -33,3 +33,12 @@ wsl --set-default-version 2
 // The distro that you've chosen above should now display a '2' under the 'version' column. Now that you're finished feel free to start using your WSL 2 distro!
 wsl --list --verbose or wsl -l -v
 ```
+
+
+## Use VirtualBox on windows 10
+Requirements:
+
+    1. Turn off Hyper-v
+    2. Turn off Windows sandbox
+
+Restart 2 times and start vm
