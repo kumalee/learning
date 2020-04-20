@@ -9,6 +9,7 @@
   "author": "Kuma Li",
   "license": "MIT",
   "dependencies": {
+    "download": "^7.1.0",
     "puppeteer": "^1.14.0"
   }
 }
