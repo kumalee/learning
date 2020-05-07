@@ -36,6 +36,7 @@
 ## color related
 1. [Brand Colors](http://brandcolors.net/)
 2. [Google Art Palette](https://artsexperiments.withgoogle.com/artpalette/)
+3. [CSS Gradient](https://cssgradient.io/)
 
 ## image related
 ### Single Image resources
