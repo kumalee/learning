@@ -51,6 +51,9 @@
 4. [VisualHunt](https://visualhunt.com/)
 5. [TheStocks](http://thestocks.im/)
 
+### Map generator
+1. [Pixel Map](https://pixelmap.amcharts.com/)
+
 ## SVG Illustration
 1. [undraw.co - Free for commerical use](https://undraw.co/)
 2. [shape.so - by MengTo](https://shape.so)
