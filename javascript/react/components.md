@@ -94,3 +94,5 @@
 ## User guide tours
 1. [react-joyride](https://github.com/gilbarbara/react-joyride)
     Create awesome tours for your app!
+
+https://github.com/KyleAMathews/typography.js
