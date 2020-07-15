@@ -74,3 +74,7 @@ including Yoast SEO, CSS Hero, WooCommerce, WPML, BuddyPress, Polylang, CF7 and 
 
 # Mini Program
 https://wordpress.org/plugins/wp-mini-program/
+
+
+# Database Docs
+https://codex.wordpress.org/Database_Description
