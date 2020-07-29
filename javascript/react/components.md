@@ -9,7 +9,8 @@
     A React component for swipeable views.
 
 ## Editor
-1. [react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg)
+1. [Braft Editor](https://github.com/margox/braft-editor)
+2. [react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg)
     react wysiwyg editor
 
 ## Form
@@ -88,7 +89,7 @@
     Accessible modal dialog component for React.JS
 
 ## Spinner
-1. [react-spinkit](https://github.com/KyleAMathews/react-spinkit)
+1. [react-spinners](https://github.com/davidhu2000/react-spinners)
     A collection of loading indicators animated with CSS for React
 
 ## Animation
@@ -127,6 +128,8 @@
     Simple React hook to create a HTML5-compliant drag'n'drop zone for files.
 7. [react-portal](https://github.com/tajo/react-portal)
     React component for transportation of modals, lightboxes, loading bars... to document.body or else.
+8. [hooks](https://github.com/alibaba/hooks)
+    React Hooks Library of alibaba
 
 ## Canvas and Charts and WebGL
 1. [react-canvas](https://github.com/Flipboard/react-canvas)
