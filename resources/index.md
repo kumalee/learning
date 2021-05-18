@@ -74,6 +74,11 @@
 
 ## icon related
 1. [Icons for everything](https://thenounproject.com/)
+2. [Weather Icons](https://erikflowers.github.io/weather-icons/)
+3. [Ant Design Icons](https://github.com/ant-design/ant-design-icons)
+4. [Bootstrap Icons](https://github.com/twbs/icons)
+5. [Feather Icons](https://github.com/feathericons/feather)
+6. [Font Awesome Icons](https://fontawesome.com/)
 
 ## logo related
 1. [Instant Logo](http://instantlogosearch.com/)
